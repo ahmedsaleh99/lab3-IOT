@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+</head>
+
+<body>
+    <div>
+        <button id="in" >Count to ten!</button>
+        <label>
+            You've clicked: <span id="out">0</span> times.
+        </label>
+    </div>
+
+    <script>
+        var button = document.getElementById("in");
+        
+        button.onclick = function () {
+            var output = document.getElementById("out");
+            //console.log(output);
+            output.innerHTML = (Number(output.innerHTML) + 1) % 10; // + to convert string to number (+"3" = 3)
+        };
+
+    </script>
+</body>
+
+</html>

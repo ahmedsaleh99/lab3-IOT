@@ -1,0 +1,36 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>IOT Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+	<h3>Click the button</h3>
+	<p>Hello World WebSocket</p>
+	<button id="led0">Click me!</button>
+
+    <script>
+    var button = document.getElementById("led0");
+    button.onclick = function(){
+      ws.send("Button Clicked");
+    }
+		var HOST = location.origin.replace(/^http/, 'ws');
+    var ws = new WebSocket(HOST);
+
+    // event emmited when connected
+    ws.onopen = function () {
+        console.log('websocket is connected ...')
+        // sending a send event to websocket server
+        ws.send('connected')
+    }
+
+    // event emmited when receiving message
+    ws.onmessage = function (ev) {
+        console.log(ev);
+    }
+	</script>
+</body>
+
+</html>

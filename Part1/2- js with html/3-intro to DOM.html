@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>IOT Lab</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+	<h3>Click the button</h3>
+	<p>Red color means that LED is OFF, Green color means that LED is ON</p>
+	<button id="led0">LED 0</button>
+	
+    <script>
+		var button = document.getElementById("led0");
+		// set initial background color
+		button.style.background = 'red';
+		// add click event listener
+		button.onclick = function(){
+			if (this.style.background=='red'){
+				this.style.background = 'green';
+			}else{
+				this.style.background = 'red';
+			}
+		}
+	</script>
+</body>
+
+</html>
