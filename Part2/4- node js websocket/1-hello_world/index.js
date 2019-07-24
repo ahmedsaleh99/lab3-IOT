@@ -18,6 +18,6 @@ wss.on('connection', function (wsclient) {
 
   wsclient.on('message', function (message) {
     console.log('received: %s', message)
-		wsclient.send("echomessage");
+		wsclient.send("hello client! how are you?");
   });
 });
