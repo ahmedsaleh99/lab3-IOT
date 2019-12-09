@@ -10,6 +10,6 @@
   "author": "ahmed abdelbasit",
   "dependencies": {
     "express": "4.16.2",
-    "ws": "3.2.0"
+    "ws": "7.2.0"
   }
 }
